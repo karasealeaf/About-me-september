@@ -1,4 +1,4 @@
-let answer1= confirm('Are you ready to rumble')
+let answer1= confirm('Are you ready??')
 
 console.log (answer1)
 
