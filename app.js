@@ -1,79 +1,107 @@
-let color = prompt("What is a primary colour!?");
+function aboutYou() {
+  let color = prompt("What is a primary colour!?");
 
-console.log(color);
-console.log(color.toLowerCase());
+  console.log(color);
+  console.log(color.toLowerCase());
 
-switch (color.toLowerCase()) {
-  case "yellow":
-    console.log("Your right, the colour yellow is a primary colour!");
-    break;
-  case "red":
-    console.log("Your right, the colour red is a primary colour!");
-    break;
-  case "blue":
-    console.log("Your right, the colour blue is a primary colour!");
-    break;
-  default:
-    console.log("Errr, that colour is definately NOT a primary one!");
+  switch (color.toLowerCase()) {
+    case "yellow":
+      console.log("Your right, the colour yellow is a primary colour!");
+      break;
+    case "red":
+      console.log("Your right, the colour red is a primary colour!");
+      break;
+    case "blue":
+      console.log("Your right, the colour blue is a primary colour!");
+      break;
+    default:
+      console.log("Errr, that colour is definately NOT a primary one!");
+  }
+
+  let username = prompt("What is your name?");
+  console.log("The users name is " + username);
+
+  let userlocation = prompt("Where are you from?");
+  console.log("You are from " + userlocation);
+
+  let colour = prompt("What is your favourite colour?");
+  console.log("Your favourite colour is " + colour);
+
+  let feel = prompt("How are you?");
+  console.log("You are " + feel);
+
+  let pet = prompt("Do you have any pets?");
+  console.log("You have a " + pet);
+
+  alert(
+    "Hello there " +
+      username +
+      ", you are from " +
+      userlocation +
+      ". Wow, " +
+      colour +
+      " is THE best colour!! " +
+      "OMG, I can't believe you feel " +
+      feel +
+      "!" +
+      " Amazing, you have a " +
+      pet +
+      "!"
+  );
+
+  console.log("This is just to check if the script is working.");
 }
 
-let username = prompt("What is your name?");
-console.log("The users name is " + username);
+//QUIZ
 
-let userlocation = prompt("Where are you from?");
-console.log("You are from " + userlocation);
+function doQuiz() {
+  let userPoints = 0;
 
-let colour = prompt("What is your favourite colour?");
-console.log("Your favourite colour is " + colour);
+  alert("Welcome to my quiz!");
 
-let feel = prompt("How are you?");
-console.log("You are " + feel);
+  let user = prompt("What is your name?");
 
-let pet = prompt("Do you have any pets?");
-console.log("You have a " + pet);
+  //Making sure they didn’t press cancel ort leave the box empty.
 
-alert(
-  "Hello there " +
-    username +
-    ", you are from " +
-    userlocation +
-    ". Wow, " +
-    colour +
-    " is THE best colour!! " +
-    "OMG, I can't believe you feel " +
-    feel +
-    "!" + " Amazing, you have a " + pet + "!"
-);
+  if (!user) {
+    user = prompt("You need to tell me your name!");
+  }
 
-console.log("This is just to check if the script is working.");
+  alert("Hello " + user + ". Welcome to my quiz, would you like to play?");
 
+  let favFoods = ["pizza", "pasta", "garlic bread"];
 
+  let foodAns = prompt("What is one of my favourite foods?").toLowerCase();
 
+  for (let i = 0; i < favFoods.length; favFoods++) {
+    console.log("checking");
+    if (foodAns === favFoods[i]) console.log("found");
+    alert("Noice");
+    userPoints++;
+  }
 
+  let films = [
+    "Legally blonde",
+    "Sweet home Alabama",
+    "Barbie",
+    "Shaun of the dead",
+    "Any horror",
+  ];
 
+  let answer = prompt("What is my favourite film?").toLowerCase();
 
-let userPoints = 0;
+  for (let i = 0; i < films.length; i++) {
+    if (answer === films[i]) {
+      console.log("working!");
+      alert("correct");
+      userPoints++;
+    }
+  }
 
-alert ('Welcome to my quiz!');
+  if (films.indexOf(answer) >= 0) {
+    alert("You got it right!");
+    userPoints++;
+  }
 
-let user = prompt ('What is your name?');
-
-//Making sure they didn’t press cancel ort leave the box empty.
-
-if (!user) {
-user = prompt ('You need to tell me your name!');
-}
-
-alert ('Hello ' + user + '. Welcome to my quiz, would you like to play?');
-
-let favFoods = ['pizza', 'pasta', 'garlic bread'];
-
-let foodAns = prompt ('What is one of my favourite foods?').toLowerCase();
-
-for (let i = 0; i <  favFoods.length; favFoods++) {
-console.log ('checking');
-if (foodAns === favFoods [i])
-console.log ('found');
-alert ('Noice');
-userPoints++;
+  alert("You got " + userPoints + "/1 questions correct");
 }
