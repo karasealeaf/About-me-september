@@ -64,27 +64,16 @@ if (!user) {
 user = prompt ('You need to tell me your name!');
 }
 
-if (user !== 'Liam') {
-alert ('urgh, you could have been called Liam, instead you have a silly name like ' = user);
-}
-
-alert ('Hello ' + user + '. Would you like to play a game?');
+alert ('Hello ' + user + '. Welcome to my quiz, would you like to play?');
 
 let favFoods = ['pizza', 'pasta', 'garlic bread'];
 
-let foodAns = prompt ('What is one of Tims favourite foods?').toLowerCase();
+let foodAns = prompt ('What is one of my favourite foods?').toLowerCase();
 
 for (let i = 0; i <  favFoods.length; favFoods++) {
 console.log ('checking');
 if (foodAns === favFoods [i])
 console.log ('found');
-{alert ('yeah nice');
+alert ('Noice');
 userPoints++;
 }
-}
-
-alert ('You got ' + userPoints = '/1 Questions correct!');
-
-
-if (foodAns === 'pizza') {
-alert ('Yeah nice one, he loves pizza!'); }
